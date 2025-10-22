@@ -1,0 +1,36 @@
+.container{
+    /* width:50px; */
+    margin:20px;
+    background-color: aquamarine;
+}
+.box-1{
+background-color: blueviolet;
+font-size: medium;
+border: 5px solid red;
+padding: 6px solid white;
+margin: 3px solid white;
+}
+.button{
+width:20px;
+height: 20px;
+border-radius: 6px red;
+}
+.list{
+    border:2px solid red;
+    padding:10px;
+    border-radius: 5px;
+}
+.block{
+    float: right;
+    width:33.3%;
+    padding:10px;
+    border:4px solid #acc;
+    box-sizing: border-box;
+}
+.p-box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid rebeccapurple;
+    margin-top: 30px;
+    position: relative;
+}
