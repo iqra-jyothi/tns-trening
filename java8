@@ -1,0 +1,110 @@
+//this show if both interface have same signature how to resole
+interface a
+{
+    default public void start()
+    {
+        System.out.println("a.....");
+    }
+}
+
+interface b
+{
+    default public void start()
+    {
+        System.out.println("b.....");
+    }
+}
+class C implements a,b {
+     public void start()
+    {
+      b.super.start();  
+    }
+ 
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		  a c=new C();
+		  c.start();
+	}
+}
+[10:23, 11/19/2025] Jyothi: interface a
+{
+  abstract  public void abs();
+ 
+    default public void start()
+    {
+        System.out.println("default.....");
+    }
+     public static  void stati()
+    {
+        System.out.println("static.....");
+    }
+}
+
+class C implements a{
+      public void abs(){
+          System.out.println("helo");
+      }
+ 
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		  a c=new C();
+		  c.abs();
+		  c.start();
+		  a.stati();
+	
+	}
+}
+[11:25, 11/19/2025] Jyothi: @FunctionalInterface
+// interface Greeting
+// {
+//     abstract public void sayhello(String name);
+// }
+
+// interface Calcul
+// {
+//     abstract public int opre(int a,int b);
+// }
+interface Checknumber
+{
+    abstract public void check(int n);
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		  Checknumber g=(n)->{
+		      //if(n%2==0)
+		      //{
+		      //    System.out.println("the number is even");
+		      //}
+		      //else if(n>=0)
+		      //{
+		      //           System.out.println("the number is positive");
+		      //}
+		      //else{
+		          
+		          for(int i=2;i<n;i++)
+		          {
+		              if(n%i==0)
+		              {
+		                  System.out.println("not prime");
+		                  break;
+		              }
+		              else{
+		                  System.out.println(" prime");
+		              }
+		          }
+		      //}
+		  };
+		  g.check(4);
+
+	
+	}
+}
